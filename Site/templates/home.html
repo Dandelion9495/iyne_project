@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iyne Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 >Iyne.Store</h1>
+        <div class="about-us">
+            <div class="text">
+                <h2><strong>О нас:</strong></h2>
+                <p>Мы - магазин стиля и искусства, вдохновленный красотой мира. Предлагаем уникальные товары для вашего дома и жизни, придающие индивидуальность и стиль. У нас есть все, чтобы создать атмосферу, отражающую вашу личность и вкусы. Добро пожаловать в мир, где каждая деталь имеет значение.</p>
+            </div>
+            <div class="image">
+                <img src="{% static '1.jpg' %}" alt="О нас">
+            </div>
+        </div>
+
+        <div class="title-container">
+            <h2>Шоорум Iyne - это пространство для <span style="color: #AE7E50;">стиля</span> <span style="color: #4D6B94;">и </span> <span style="color: #AE7E50;">искусства!</span></h2>
+        </div>
+        <p style="text-align: center;"> Iyne - это не просто магазин, это площадка для развития малого бизнеса. Мы поддерживаем начинающих предпринимателей, давая им возможность заявить о себе и поделиться своим талантом со всем миром.</p>
+    </div>
+
+
+    <div class="row-box">
+        <div class="box">
+            <img src="{% static '6.jpg' %}" alt="">
+        </div>
+        <div class="box">
+            <img src="{% static '7.jpg' %}" alt="">
+        </div>
+        <div class="box">
+            <img src="{% static '8.jpg' %}" alt="">
+        </div>
+        <div class="box">
+            <img src="{% static '9.jpg' %}" alt="">
+        </div>
+    </div>
+
+
+        <div class="container">
+        <div class="about-us">
+            <div class="text">
+                <h2><strong>Iyne Shop: Где живет душа Кыргызстана:</strong></h2>
+                <p>При покупке в Iyne Shop вы поддерживаете кыргызских мастеров, развивая малый бизнес и сохраняя традиции. Получайте уникальные произведения искусства и погружайтесь в кыргызскую культуру через уникальные подарки для себя и близких.</p>
+            </div>
+            <div class="image">
+                <img src="{% static '3.jpg' %}" alt="О нас">
+            </div>
+        </div>
+        </div>
+
+
+        <div class="text">
+            <h2 style="text-align: center;"><strong>У нас вы найдете:</strong></h2>
+        <div class="ul">
+            <ul>
+                {% for category in categories %}
+                <div class="li"><li>{{ category.name }}</li></div>
+                {% endfor %}
+            </ul>
+        </div>
+        </div>
+        </div>
+
+    <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2925.9755457002625!2d74.61907817558627!3d42.83113037115305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb673c55e268b%3A0x7fb5a776daf106af!2zMTcxLzIg0L_RgNC-0YHQvy4g0K7QvdGD0YHQsNC70LjQtdCy0LAsINCR0LjRiNC60LXQug!5e0!3m2!1sru!2skg!4v1717501665634!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="font-size: 20px; color: #4D6B94;">пн-вс 10:00 - 22:00 каждый день • instagram: https://www.instagram.com/iyne.store/ • номер для справки: +996552507505</h1>
+    </div>
+
+</body>
+</html>
